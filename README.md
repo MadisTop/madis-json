@@ -8,7 +8,7 @@ Website: <https://madis.top>
 
 ## Download
 
-Download the latest installers from [GitHub Releases](../../releases).
+Download the latest installers from [GitHub Releases](https://github.com/MadisTop/madis-json/releases) or [Gitee Releases](https://gitee.com/Madis/madis-json/releases).
 
 Test releases are marked as **Pre-release**. Verify downloaded files with the accompanying `SHA256SUMS.txt` before installation.
 

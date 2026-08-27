@@ -8,7 +8,7 @@
 
 ## 下载
 
-请从 [GitHub Releases](../../releases) 下载最新安装包。
+请从 [GitHub Releases](https://github.com/MadisTop/madis-json/releases) 或 [Gitee 发行版](https://gitee.com/Madis/madis-json/releases) 下载最新安装包。
 
 测试版本会标记为 **Pre-release**。安装前请使用随版本提供的 `SHA256SUMS.txt` 校验下载文件。
 
