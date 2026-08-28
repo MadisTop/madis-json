@@ -8,7 +8,7 @@ Website: <https://madis.top>
 
 ## Download
 
-Download the latest installers from [GitHub Releases](https://github.com/MadisTop/madis-json/releases) or [Gitee Releases](https://gitee.com/Madis/madis-json/releases).
+Windows users will be able to install from Microsoft Store as the preferred option. The Store listing is still being prepared; do not trust unofficial Store links before it is announced. For now, download the latest installers from [GitHub Releases](https://github.com/MadisTop/madis-json/releases) or [Gitee Releases](https://gitee.com/Madis/madis-json/releases).
 
 Test releases are marked as **Pre-release**. Verify downloaded files with the accompanying `SHA256SUMS.txt` before installation.
 
@@ -25,20 +25,23 @@ Test releases are marked as **Pre-release**. Verify downloaded files with the ac
 
 ## Downloads by platform
 
-| Platform | Packages |
-| --- | --- |
-| Windows x64 | NSIS `.exe`, `.msi` |
-| Linux x64 | `.AppImage`, `.deb`, `.rpm` |
-| macOS Intel | `.dmg` |
-| macOS Apple Silicon | `.dmg` |
+| Platform | Packages | Current platform trust status |
+| --- | --- | --- |
+| Windows x64 | Microsoft Store MSIX (in preparation); NSIS `.exe`, `.msi` | Prefer the Store build once available; direct downloads are not yet Authenticode-signed |
+| Linux x64 | `.AppImage`, `.deb`, `.rpm` | Stable AppImage and RPM builds use the OpenPGP key published with the release |
+| macOS Intel | `.dmg` | Currently ad-hoc signed only; no Developer ID signing or notarization yet |
+| macOS Apple Silicon | `.dmg` | Currently ad-hoc signed only; no Developer ID signing or notarization yet |
 
 ## Version support policy
 
 Official binaries periodically verify a signed version policy. The latest supported version remains usable even after one year. After a newer version is released, each older version remains usable only until one calendar year after its own release date; expired or revoked versions must be updated. A previously verified policy may be used offline for up to 14 days. An old installer may still complete installation, but an expired build is blocked from entering the main application at startup.
 
-## Installation notice
+## Installation and signature notice
 
-Test builds may not be commercially code-signed. Windows SmartScreen or macOS Gatekeeper may therefore display a warning. Only download packages from this repository's Releases page and verify their SHA-256 checksums.
+- **Windows:** Direct `.exe` and `.msi` downloads do not yet have an Authenticode certificate, so SmartScreen may still display a warning. Prefer Microsoft Store installation and updates after the listing becomes available.
+- **Linux:** Stable releases include `Madis-JSON-Linux-Signing-Key.asc` and `Madis-JSON-Linux-Signing-Fingerprint.txt`. Check the full fingerprint before importing the key. After importing it, verify RPM packages with `rpm --checksig <file.rpm>`. Use `<file.AppImage> --appimage-signature` to inspect the embedded AppImage signature information.
+- **macOS:** During the current zero-budget phase, the project has not joined the Apple Developer Program. DMG files do not yet have Developer ID signing or Apple notarization, so Gatekeeper may warn or block them.
+- On every platform, download only from this repository's Releases and verify `SHA256SUMS.txt`. Tauri Updater `.sig` files protect in-app updates; they are not Windows, macOS, or Linux platform code-signing certificates.
 
 ## Feedback
 
