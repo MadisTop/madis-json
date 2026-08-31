@@ -14,7 +14,7 @@ Test releases are marked as **Pre-release**. Verify downloaded files with the ac
 
 ## Features
 
-- Opens JSON files up to 2 GB with on-demand parsing
+- Opens JSON files up to 4 GiB with on-demand parsing
 - Tree view with virtual scrolling, lazy loading, and pagination
 - Text view for files up to 20 MB
 - Searches object keys and leaf values
@@ -34,7 +34,7 @@ Test releases are marked as **Pre-release**. Verify downloaded files with the ac
 
 ## Version support policy
 
-Official binaries periodically verify a signed version policy. The latest supported version remains usable even after one year. After a newer version is released, each older version remains usable only until one calendar year after its own release date; expired or revoked versions must be updated. A previously verified policy may be used offline for up to 14 days. An old installer may still complete installation, but an expired build is blocked from entering the main application at startup.
+Official binaries periodically verify a signed version policy. The latest supported version remains usable even after one year. After a newer version is released, each older version remains usable for at most one additional calendar month, while retaining an absolute limit of one calendar year from its own release date; the earlier deadline applies. Expired or revoked versions must be updated. A previously verified policy may be used offline for up to 14 days. An old installer may still complete installation, but an expired build is blocked from entering the main application at startup.
 
 ## Installation and signature notice
 
