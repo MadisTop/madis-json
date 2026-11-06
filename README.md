@@ -2,20 +2,22 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-A fast, cross-platform desktop viewer designed for large JSON files.
+A cross-platform viewer and analysis tool for large JSON files, with on-demand tree browsing, full-text search, multi-file comparison, and property watches.
 
 Website: <https://madis.top>
 
 ## Download
 
-Windows users will be able to install from Microsoft Store as the preferred option. The Store listing is still being prepared; do not trust unofficial Store links before it is announced. For now, download the latest installers from [GitHub Releases](https://github.com/MadisTop/madis-json/releases) or [Gitee Releases](https://gitee.com/Madis/madis-json/releases).
+Download the latest installers from [GitHub Releases](https://github.com/MadisTop/madis-json/releases) or [Gitee Releases](https://gitee.com/Madis/madis-json/releases).
 
 Test releases are marked as **Pre-release**. Verify downloaded files with the accompanying `SHA256SUMS.txt` before installation.
 
 ## Features
 
-- Opens JSON files up to 4 GiB with on-demand parsing
+- Parses large JSON files on demand; no artificial 4 GiB limit on 64-bit platforms, subject to system mapping capacity
 - Tree view with virtual scrolling, lazy loading, and pagination
+- Compares 2–8 JSON files side by side with difference filtering and synchronized browsing
+- Watches nested properties with image and web previews
 - Text view for files up to 20 MB
 - Searches object keys and leaf values
 - Opens files by file picker, drag and drop, file association, or clipboard paste
@@ -25,12 +27,12 @@ Test releases are marked as **Pre-release**. Verify downloaded files with the ac
 
 ## Downloads by platform
 
-| Platform | Packages | Current platform trust status |
-| --- | --- | --- |
-| Windows x64 | Microsoft Store MSIX (in preparation); NSIS `.exe`, `.msi` | Prefer the Store build once available; direct downloads are not yet Authenticode-signed |
-| Linux x64 | `.AppImage`, `.deb`, `.rpm` | Stable AppImage and RPM builds use the OpenPGP key published with the release |
-| macOS Intel | `.dmg` | Currently ad-hoc signed only; no Developer ID signing or notarization yet |
-| macOS Apple Silicon | `.dmg` | Currently ad-hoc signed only; no Developer ID signing or notarization yet |
+| Platform | Packages |
+| --- | --- |
+| Windows x64 | NSIS `.exe`, `.msi` |
+| Linux x64 | `.AppImage`, `.deb`, `.rpm` |
+| macOS Intel | `.dmg` |
+| macOS Apple Silicon | `.dmg` |
 
 ## Version support policy
 
@@ -38,10 +40,15 @@ Official binaries periodically verify a signed version policy. The latest suppor
 
 ## Installation and signature notice
 
-- **Windows:** Direct `.exe` and `.msi` downloads do not yet have an Authenticode certificate, so SmartScreen may still display a warning. Prefer Microsoft Store installation and updates after the listing becomes available.
-- **Linux:** Stable releases include `Madis-JSON-Linux-Signing-Key.asc` and `Madis-JSON-Linux-Signing-Fingerprint.txt`. Check the full fingerprint before importing the key. After importing it, verify RPM packages with `rpm --checksig <file.rpm>`. Use `<file.AppImage> --appimage-signature` to inspect the embedded AppImage signature information.
-- **macOS:** During the current zero-budget phase, the project has not joined the Apple Developer Program. DMG files do not yet have Developer ID signing or Apple notarization, so Gatekeeper may warn or block them.
+- **Windows:** Before installation, inspect the digital signature in file properties and verify the publisher. SmartScreen may display a warning; review the download source, checksum information, and system prompts instead of bypassing protection to install software from an unknown source.
+- **Linux:** If the release includes `Madis-JSON-Linux-Signing-Key.asc` and `Madis-JSON-Linux-Signing-Fingerprint.txt`, verify the full fingerprint through a trusted channel before importing the key. After importing it, use `rpm --checksig <file.rpm>` to verify RPM packages. Use `<file.AppImage> --appimage-signature` to inspect embedded AppImage signature information.
+- **macOS:** Follow Gatekeeper's actual verification result and check the developer identity and notarization information. If the system cannot verify the software, confirm the download source and checksum information instead of bypassing protection to install software from an unknown source.
 - On every platform, download only from this repository's Releases and verify `SHA256SUMS.txt`. Tauri Updater `.sig` files protect in-app updates; they are not Windows, macOS, or Linux platform code-signing certificates.
+
+## Data and privacy
+
+- Visible network links in the watch panel are accessed automatically and may disclose your IP address and other standard request information to the destination; review link targets when working with sensitive data.
+- Web previews restrict scripts, forms, popups, and same-origin permissions. Some sites block embedding and may not display a preview.
 
 ## Feedback
 
