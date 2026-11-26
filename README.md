@@ -21,6 +21,7 @@ Test releases are marked as **Pre-release**. Verify downloaded files with the ac
 - Text view for files up to 20 MB
 - Searches object keys and leaf values
 - Opens files by file picker, drag and drop, file association, or clipboard paste
+- Automatically extracts JSON from printed Java/Go/Python objects, maps, logs, code fences, JSONP, and commented JSON
 - Copies property names, values, JSON paths, and complete nodes
 - Light and dark themes
 - Available for Windows, macOS, and Linux
