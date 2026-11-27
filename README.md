@@ -16,13 +16,11 @@ Test releases are marked as **Pre-release**. Verify downloaded files with the ac
 
 - Parses large JSON files on demand; no artificial 4 GiB limit on 64-bit platforms, subject to system mapping capacity
 - Tree view with virtual scrolling, lazy loading, and pagination
-- Compares 2–8 JSON files side by side with difference filtering, character-level red/green highlighting, and synchronized browsing
+- Compares 2–8 JSON files side by side with difference filtering and synchronized browsing
 - Watches nested properties with image and web previews
 - Text view for files up to 20 MB
 - Searches object keys and leaf values
 - Opens files by file picker, drag and drop, file association, or clipboard paste
-- Automatically extracts JSON from printed Java/Go/Python objects, maps, logs, code fences, JSONP, and commented JSON
-- Drops .txt/.log and other common text files to extract and display embedded JSON automatically
 - Copies property names, values, JSON paths, and complete nodes
 - Light and dark themes
 - Available for Windows, macOS, and Linux
